@@ -19,7 +19,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "HOTEL", schema = "gestion_agence_voyage_db")
+@Table(name = "HOTEL", schema = "gestion_agence_git")
 public class Hotel  implements Serializable{
 
 	@Id

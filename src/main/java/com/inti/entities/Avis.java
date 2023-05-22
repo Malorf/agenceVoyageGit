@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "AVIS", schema = "gestion_agence_voyage_db")
+@Table(name = "AVIS", schema = "gestion_agence_git")
 
 public class Avis implements Serializable{
 
