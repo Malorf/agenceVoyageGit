@@ -27,9 +27,6 @@ public class Employe implements Serializable{
 	@OneToOne(mappedBy="employe", cascade = CascadeType.ALL, fetch =FetchType.LAZY)
 	private Voiture voiture;
 	
-	@OneToMany(mappedBy="employe", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	private List<Destination> contrats = new ArrayList<>();
-	
 	public Employe()
 	{
 		
