@@ -28,7 +28,7 @@ public class Employe implements Serializable{
 	private Voiture voiture;
 	
 	@OneToMany(mappedBy="employe", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	private List<Contrat> contrats = new ArrayList<>();
+	private List<Reservation> contrats = new ArrayList<>();
 	
 	public Employe()
 	{
@@ -82,11 +82,11 @@ public class Employe implements Serializable{
 		this.voiture = voiture;
 	}
 
-	public List<Contrat> getContrats() {
+	public List<Reservation> getContrats() {
 		return contrats;
 	}
 
-	public void setContrats(List<Contrat> contrats) {
+	public void setContrats(List<Reservation> contrats) {
 		this.contrats = contrats;
 	}
 
