@@ -6,11 +6,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.inti.entities.Contrat;
+import com.inti.entities.Destination;
 
 
 @Repository
-public interface ContratRepository extends JpaRepository<Contrat, Long>{
+public interface DestinationRepository extends JpaRepository<Destination, Long>{
 
 	/*@Query(value = "select * from contrats") 
 	List<Contrat> findAllContrats();
