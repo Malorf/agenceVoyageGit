@@ -24,9 +24,73 @@ public class Employe implements Serializable{
 	private String firstnameEmp;
 	private String function;
 	
-
+	@OneToOne(mappedBy="employe", cascade = CascadeType.ALL, fetch =FetchType.LAZY)
+	private Voiture voiture;
+	
 	public Employe()
 	{
 		
 	}
+
+	public Employe(String nameEmp, String firstnameEmp, String function) {
+		super();
+		this.nameEmp = nameEmp;
+		this.firstnameEmp = firstnameEmp;
+		this.function = function;
+	}
+
+	public Long getIdEmploye() {
+		return idEmploye;
+	}
+
+	public void setIdEmploye(Long idEmploye) {
+		this.idEmploye = idEmploye;
+	}
+
+	public String getNameEmp() {
+		return nameEmp;
+	}
+
+	public void setNameEmp(String nameEmp) {
+		this.nameEmp = nameEmp;
+	}
+
+	public String getFirstnameEmp() {
+		return firstnameEmp;
+	}
+
+	public void setFirstnameEmp(String firstnameEmp) {
+		this.firstnameEmp = firstnameEmp;
+	}
+
+	public String getFunction() {
+		return function;
+	}
+
+	public void setFunction(String function) {
+		this.function = function;
+	}
+
+	public Voiture getVoiture() {
+		return voiture;
+	}
+
+	public void setVoiture(Voiture voiture) {
+		this.voiture = voiture;
+	}
+
+	public List<Destination> getContrats() {
+		return contrats;
+	}
+
+	public void setContrats(List<Destination> contrats) {
+		this.contrats = contrats;
+	}
+
+	@Override
+	public String toString() {
+		return "Employe [idEmploye=" + idEmploye + ", nameEmp=" + nameEmp + ", firstnameEmp=" + firstnameEmp
+				+ ", function=" + function + "]";
+	}
+	
 }
