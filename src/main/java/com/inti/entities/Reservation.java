@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
 public class Reservation implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idVoyageur; 
+	private Long idReservation; 
 	@Temporal(TemporalType.DATE)
 	private Date dateReservation;
 	private int nbJours; 
@@ -40,18 +40,18 @@ public class Reservation implements Serializable{
 	}
 	
 	
-	public Reservation(Long idVoyageur, Date dateReservation, int nbJours, Voyageur voyageur, Hotel hotel) {
-		this.idVoyageur = idVoyageur;
+	public Reservation(Long idReservation, Date dateReservation, int nbJours, Voyageur voyageur, Hotel hotel) {
+		this.idReservation = idReservation;
 		this.dateReservation = dateReservation;
 		this.nbJours = nbJours;
 		this.voyageur = voyageur;
 		this.hotel = hotel;
 	}
-	public Long getIdVoyageur() {
-		return idVoyageur;
+	public Long getidReservation() {
+		return idReservation;
 	}
-	public void setIdVoyageur(Long idVoyageur) {
-		this.idVoyageur = idVoyageur;
+	public void setidReservation(Long idReservation) {
+		this.idReservation = idReservation;
 	}
 	public Date getDateReservation() {
 		return dateReservation;
@@ -79,7 +79,7 @@ public class Reservation implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Reservation [idVoyageur=" + idVoyageur + ", dateReservation=" + dateReservation + ", nbJours=" + nbJours
+		return "Reservation [idReservation=" + idReservation + ", dateReservation=" + dateReservation + ", nbJours=" + nbJours
 				+ ", voyageur=" + voyageur + "]";
 	}
 }
